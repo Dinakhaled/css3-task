@@ -1,0 +1,348 @@
+/*----------GLOBAL-------------*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    margin: 0;
+    font-family:WorkSans, sans-serif;
+    line-height: 2;
+    background:url(../images/kari-shea-196148-unsplash-compressor.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    background-blend-mode: overlay;
+    background-repeat: no-repeat; 
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+p{
+    color: #979797;
+    font-size: 12px;
+}
+h2{
+    color: #333333;
+}
+a{
+    text-decoration: none;
+}
+@font-face{
+    font-family: 'WorkSans';
+    src: url('fonts/WorkSans-Regular.ttf');
+    font-weight: normal;
+}
+@font-face{
+    font-family: "WorkSans";
+    src: url('fonts/WorkSans-Bold.ttf');
+    font-weight: bold;
+}
+/*----------HEADER------------*/
+header{
+    height: 100vh;
+    background: rgba(37, 37, 37, 0.8);
+    border-top: 5px solid #76c38f;
+}
+header .logo {
+    line-height: 1;
+    margin-top: 44px;
+}
+header .logo h2{
+    color: #fff;
+    font-size: 28px;
+}
+header .flex-nav{
+    display: flex; 
+    justify-content: space-between; 
+}
+header nav ul{
+    list-style: none;
+    display: flex; 
+    margin-top: 44px;      
+}
+header nav ul li a{
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 13px;
+    padding: 10px 20px;    
+    transition: 0.5s all ease-in-out;
+}
+header nav ul li a:hover{
+    background: #76c38f;
+    border-radius: 10px;
+    /* padding: 10px 20px; */
+}
+header nav ul li a.active{
+    background: #76c38f;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+header nav ul li:last-child a{
+    margin-right: 0;
+}
+header .main-header{
+    height: 100vh;
+}
+header .header-content{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    height: calc(100% - 80px);    
+    grid-template-areas: 
+    "icon1 text-header figure icon2"
+}
+header .header-content .iconArrow1{
+    grid-area: icon1;
+    align-self: center;
+}
+header .header-content .iconArrow2{
+    grid-area: icon2;
+    text-align: right;
+    align-self: center;    
+}
+header .header-content h1{
+   color: #fff;
+   margin-bottom: 30px;
+   font-size: 46px;
+   line-height: 1;   
+}
+header .header-content p{
+    margin-bottom: 20px;
+ }
+header .header-text{
+    grid-area: text-header;
+    width: 450px;
+}
+header figure{
+    width: 450px;
+}
+header .header-content button{
+    color: #fff;
+    background-color: #76c38f;
+    border:none;  
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+header .header-content figure{
+    grid-area: figure;
+    background: url(../images/car2-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 20px solid #6b6b6b;
+    border-radius: 50%;
+    height: 450px;
+    transition: 0.5s all ease-in-out;
+}
+header .header-content figure:hover{
+    transform: rotate(360deg);
+}
+header .iconArrow1,
+header .iconArrow2{
+    color: #76c38f;
+    font-size: 60px;
+    cursor: pointer;
+}
+
+/*------------FIRST SECTION-----------*/
+.first-sec {
+    display: grid;
+    width: 80%;
+    margin: 0 auto;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;  
+    color: #656565;
+    padding: 60px 0;
+}
+.first-sec > div{
+    background-color: #FFF;
+    padding:22px 52px;
+    text-align: center;
+    transition: 0.5s all ease-in-out;    
+}
+.first-sec i {
+    font-size: 100px;
+    color: #000;
+    margin-bottom: 15px;
+}
+.first-sec h2{
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 1;
+}
+.first-sec > div:hover{
+    background: #76c38f;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.first-sec > div:hover p,
+.first-sec > div:hover h2,
+.first-sec > div:hover i{
+    color: #fff ;
+}
+
+/*----------SECOND SECTION----------*/
+.second-sec{
+    text-align: center;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;  
+    color: #656565;
+    padding: 50px 0;
+}
+.second-sec > div{
+    height: 200px;
+    text-align: center;
+    border:5px solid #fff;
+    background: url(../images/office-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: grayscale();
+    transition: 0.5s all ease-in-out;        
+}
+.second-sec > div:hover{
+    filter: none;
+    border-color: #76c38f;
+}
+.second-sec > div:hover > div{
+    display: none;
+}
+.second-sec > div:nth-child(2){
+    background: url(../images/daria-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.second-sec > div:nth-child(3){
+    background: url(../images/helloquence-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.second-sec > div:nth-child(4){
+    background: url(../images/unsplash-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.second-sec > div:nth-child(5){
+    background: url(../images/car2-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.second-sec > div:nth-child(6){
+    background: url(../images/arnel-hasanovic-375269-unsplash-compressor.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;    
+}
+.before-border{
+    text-align: center;
+}
+.before-border h2{
+    color: #fff;
+    background: #303030;
+    display: inline-block;
+    padding: 12px 16px;
+    border-radius: 10px;
+}
+
+.before-border::before{
+    content: "";
+    display: block;
+    border: 2px solid #303030;
+    top: 32px;
+    position: relative;
+    z-index: -1;
+}
+.second-img {
+    position: relative;
+    text-align: center;
+}
+.second-img > div{
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 0;
+}
+.second-img > div p{
+    color: #fff;
+}
+
+/*-----------FOOTER----------*/
+footer{
+    background: #242424;
+    padding: 50px 0;
+    border-bottom: 2px solid #000;
+}
+footer .footer-grig{
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+footer .footer-grig h3{
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+footer .footer-grig h4{
+    margin-bottom:10px; 
+}
+footer .footer-grig h4,
+footer .footer-grig span,
+footer .footer-grig a{
+    color: #76c38f;
+}
+footer input,
+footer textarea{
+    background: #222222;
+    border:none;
+    padding: 12px 10px; 
+    color: #fff;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+footer textarea{
+    height: 80px;
+}
+footer input:focus,
+footer textarea:focus{
+    outline: #76c38f;
+    border: 1px solid #76c38f;
+}
+footer .footer-grig .margin{
+    margin-right: 20px;
+}
+footer input[type="submit"]{
+    display: block;
+    padding: 10px 20px;
+    background: #76c38f;
+    color: #222222;
+    font-weight: bold;
+    margin-bottom: 0;
+    width: auto;
+}
+footer .parag p{
+    border-bottom: 1px solid #404040;
+    padding: 4px 0;
+}
+footer .margin .spical{
+    margin-bottom: 40px;
+}
+.bg{
+    background: #2b2b2b;
+    padding: 27px 0;
+}
+.copyright {
+    display: flex;
+    justify-content: space-between;
+}
